@@ -14,14 +14,16 @@ Keep this template as lightweight as you can!
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>{{meta_title}}</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset " built/screen.css"}}" />
 </head>
+
 <body>
     <div class="site-wrapper">
 
@@ -30,7 +32,7 @@ Keep this template as lightweight as you can!
                 <div class="inner">
                     <nav class="site-nav-center">
                         {{#if @site.logo}}
-                        <a class="site-nav-logo" href="{{@site.url}}"><img src="{{img_url @site.logo size="xs"}}"
+                        <a class="site-nav-logo" href="{{@site.url}}"><img src="{{img_url @site.logo size=" xs"}}"
                                 alt="{{@site.title}}" /></a>
                         {{else}}
                         <a class="site-nav-logo" href="{{@site.url}}">{{@site.title}}</a>
@@ -46,7 +48,7 @@ Keep this template as lightweight as you can!
                 <section class="error-message">
                     <h1 class="error-code">{{statusCode}}</h1>
                     <p class="error-description">{{message}}</p>
-                    <a class="error-link" href="{{@site.url}}">Go to the front page →</a>
+                    <a class="error-link" href="{{@site.url}}">返回前台页面 →</a>
                 </section>
 
                 {{#if errorDetails}}
@@ -54,14 +56,14 @@ Keep this template as lightweight as you can!
                     <h3>Theme errors</h3>
                     <ul class="error-stack-list">
                         {{#foreach errorDetails}}
-                            <li>
-                                <em class="error-stack-function">{{{rule}}}</em>
+                        <li>
+                            <em class="error-stack-function">{{{rule}}}</em>
 
-                                {{#foreach failures}}
-                                    <p><span class="error-stack-file">Ref: {{ref}}</span></p>
-                                    <p><span class="error-stack-file">Message: {{message}}</span></p>
-                                {{/foreach}}
-                            </li>
+                            {{#foreach failures}}
+                            <p><span class="error-stack-file">Ref: {{ref}}</span></p>
+                            <p><span class="error-stack-file">Message: {{message}}</span></p>
+                            {{/foreach}}
+                        </li>
                         {{/foreach}}
                     </ul>
                 </section>
@@ -71,4 +73,5 @@ Keep this template as lightweight as you can!
         </main>
     </div>
 </body>
+
 </html>
